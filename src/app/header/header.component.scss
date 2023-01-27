@@ -1,0 +1,56 @@
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/typography";
+
+.header {
+  @include d-flex(space-between, center);
+  padding: 2em 5em;
+  box-shadow: 0 15px 25px black;
+  z-index: 10;
+
+  .logo-content {
+    @include flex-fd-column;
+    @include d-flex(center, center);
+
+    .logo {
+      font-weight: 600;
+      color: $gray2;
+
+      .logo-red-text {
+        color: $logo-red;
+      }
+    }
+
+    .logo-base-text {
+      font-size: 0.37rem;
+    }
+  }
+
+  .nav-content {
+    font-size: $font-size-9;
+    font-weight: 500;
+    color: $gray2;
+
+    .nav-list {
+      @include d-flex(space-between, center);
+      @include list-no-style;
+    }
+
+    .nav-item {
+      margin: 0 1em;
+
+      select {
+        font-family: $family;
+        font-weight: 500;
+        outline: none;
+        border: none;
+        color: $gray2;
+      }
+      option {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
