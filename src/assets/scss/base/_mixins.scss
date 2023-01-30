@@ -12,6 +12,12 @@
   align-items: $align-items;
   flex-wrap: wrap;
 }
+
+@mixin h-w($height,$width){
+  height: $height;
+  width:$width;
+}
+
 @mixin flex-v-center {
   display: flex;
   align-items: center;
@@ -40,6 +46,13 @@
 @mixin flex-d-wrap {
   display: flex;
 }
+
+@mixin font($family, $size, $weight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
 @mixin transition($effect) {
   transition: $effect;
   -webkit-transition: $effect;

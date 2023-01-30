@@ -5,8 +5,8 @@
 
 .hero-section {
   @include d-flex(center, center);
-  padding: 10em 0;
-  background-color: #0494a2;
+  height: 70vh;
+  background-color: #2ABFCE;
   position: relative;
   .hero-title-box {
     @include d-flex(center, center);
@@ -33,32 +33,33 @@
   }
 
   .search-section {
+    filter:drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.265));
     position: absolute;
     bottom: -2rem;
-    width: 60%;
+    width: 65%;
     @include d-flex(center, center);
     @include flex-fd-column;
     .category-nav-content {
       background-color: $black1;
-      font-size: $font-size-8;
+      font-size: .8rem;
       font-weight: 400;
       color: $white;
-      padding: 0.8em 3em;
+      padding: 0.8em 0;
       border-radius: 10px 10px 0 0;
       width: 90%;
 
       .nav-list {
-        @include d-flex(space-between, center);
+        @include d-flex(center, center);
         @include list-no-style;
         padding: 0;
         margin: 0;
       }
 
       .nav-item {
-        padding: 0 3.5em;
-        border-right: 1px solid $white;
-        margin-bottom: 0.8em;
+        margin-bottom: 0.3em;
         cursor: pointer;
+        padding: 0 3em;
+        border-right: 1px solid $white;
       }
 
       .nav-item:nth-child(5) {
@@ -69,29 +70,35 @@
         background-color: $white;
       width: 100%;
       border-radius: 10rem;
-      padding: 0.3em;
-      box-shadow:
-      0px 37px 55px rgba(0, 0, 0, 0.14)
-    ;
+      padding: 0.5em;
+      
       @include d-flex(center, center);
       .location-select-container {
         @include d-flex(center, center);
         padding: 0.5em 1em;
         border-right: 1px solid $gray2;
+        color: $gray2;
         select{
             margin-left:1em;
+            padding-right: .5em;
             outline: none;
             border: none;
             font-family: $family;
+            font-weight: 300;
             color: $gray2;
+        }
+
+        span{
+          font-size: 1.3rem;
         }
       }
       .search-input {
         flex: 1;
         outline: none;
         border: none;
-        padding: 1em;
+        padding: 0 3em;
         font-family: $family;
+        font-weight: 300;
       }
 
       .search-btn{

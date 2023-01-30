@@ -1,0 +1,154 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+.card__section {
+  padding: 6em 0;
+  gap: 3rem;
+  font-size: $font-size-7;
+  @include d-flex(space-between, center);
+  @include flex-fd-column;
+  .popular__search {
+    @include d-flex(center, center);
+    @include flex-fw-nowrap;
+    .input-container {
+      @include d-flex(center, center);
+      .search__field {
+        @include font($family, 0.9rem, 500);
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+      .icon {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: $gray2;
+        margin-right: 0.5em;
+      }
+    }
+
+    .search-list {
+      @include list-no-style;
+      @include d-flex(center, center);
+
+      .search-item {
+        background-color: $gray1;
+        margin: 0 1em;
+        padding: 0.6em 2em;
+        border-radius: 10rem;
+        color: $gray2;
+        font-size: $font-size-7;
+      }
+    }
+  }
+  .small__card__section {
+    @include d-flex(space-evenly, flex-start);
+    gap: 3rem;
+    .s__card {
+      @include d-flex(space-between, center);
+      @include flex-fd-column;
+
+      
+      .card__content {
+        background-color: #fff;
+        @include h-w(6rem, 6rem);
+        @include d-flex(center, center);
+        border-radius: 0.5rem;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.159);
+        color: #5d47dca4;
+        position: relative;
+        .card__circle {
+          position: absolute;
+          border-radius: 50%;
+          background-color: #5d47dc27;
+        }
+
+        .circle1 {
+          @include h-w(0.8rem, 0.8rem);
+          bottom: 1.7rem;
+          left: 1.7rem;
+        }
+        .circle2 {
+          @include h-w(2.5rem, 2.5rem);
+        }
+        .circle3 {
+          @include h-w(1.4rem, 1.4rem);
+          top: 1.3rem;
+          right: 1.3rem;
+        }
+      }
+      .green{
+        color: #28c483a4;
+        .card__circle{
+          background-color: #28c48327;
+        }
+      }
+      .purple{
+        color: #8F1BC1a4;
+        .card__circle{
+          background-color: #8F1BC127;
+        }
+      }
+      .yellow{
+        color: #A8A93Da4;
+        .card__circle{
+          background-color: #A8A93D27;
+        }
+      }
+      .orange{
+        color: #E3991Ea4;
+        .card__circle{
+          background-color: #E3991E27;
+        }
+      }
+      .magenta{
+        color: #E22D84a4;
+        .card__circle{
+          background-color: #E22D8427;
+        }
+      }
+      .salmon{
+        color: #DCA38Ca4;
+        .card__circle{
+          background-color: #DCA38C27;
+        }
+      }
+      .blue{
+        color: #6592D7a4;
+        .card__circle{
+          background-color: #6592D727;
+        }
+      }
+    }
+    
+    
+    .card__title {
+      @include font($family, 0.9rem, 500);
+      margin-top: 1em;
+      width: 5rem;
+      text-align: center;
+      color: $black1;
+    }
+  }
+
+  .big__card__section{
+    @include d-flex(center,center);
+    
+    .b__card{
+      @include d-flex(flex-start,center);
+      @include flex-fd-column;
+      padding: 2em 2em;
+      border-radius: .4rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.372);
+      // background-color:#28c483;
+      @include h-w(28rem,23rem);
+      .card__image{
+        // background-color:#28c483;
+        img{
+          width:15rem;
+        }
+      }
+    }
+  }
+}
