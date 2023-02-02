@@ -1,0 +1,77 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+.downloading__section {
+  background-image: url("../../assets/Group\ 56574.png");
+  background-size: cover;
+  // background-position: center;
+  @include d-flex(center, flex-end);
+  height: 53vh;
+  padding: 3.5em 0;
+  .container {
+    @include d-flex(center, flex-start);
+    @include flex-fd-column;
+    width: 85%;
+    gap: 1.7rem;
+    .section__title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: white;
+      span {
+        color: black;
+      }
+    }
+    .download__section {
+      @include d-flex(center, center);
+      @include flex-fd-column;
+      gap: 1.2rem;
+      .download__title {
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+      .download__cards {
+        @include d-flex(center, center);
+        gap: 1.5rem;
+        .card {
+          @include d-flex(flex-start, center);
+          @include h-w(2.5rem, 8rem);
+          padding: 0 1em;
+          gap: 0.5rem;
+          border-radius: 0.3rem;
+          color: #fff;
+          cursor: pointer;
+          background-color: $black4;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.451);
+          .card__image {
+            img {
+              width: 1.6rem;
+              margin: 0;
+              padding: 0;
+            }
+            .apple {
+              filter: brightness(10);
+            }
+          }
+          .card__description {
+            @include d-flex(center, center);
+            @include flex-fd-column;
+            gap: 0.2rem;
+            .desc__1 {
+              font-size: 0.4rem;
+              font-weight: 300;
+              color: $gray7;
+            }
+            .desc__2 {
+              font-size: 0.7rem;
+              font-weight: 200;
+              color: $gray7;
+            }
+          }
+        }
+      }
+    }
+  }
+}

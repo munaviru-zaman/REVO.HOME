@@ -1,0 +1,68 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+.builder__section {
+  @include d-flex(center, center);
+  background-color: #f8f9fb;
+  padding: 5em 0;
+  .container {
+    @include d-flex(center, flex-start);
+    @include flex-fd-column;
+    gap: 2rem;
+    .section__title {
+      @include font(0, 1.2rem, 600);
+      color: $gray2;
+    }
+    .section__cards {
+      @include d-flex(center, center);
+      @include flex-fw-wrap;
+
+      gap: 2rem;
+      .card__container {
+        @include d-flex(center, center);
+        @include flex-fd-column;
+        gap: 1rem;
+        padding: 2.5em 0;
+        background-color: #ffffff;
+        @include h-w(15rem, 12rem);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.143);
+        border-radius: 0.8rem;
+        position: relative;
+        .card__image {
+          @include d-flex(center, center);
+          img {
+            height: 6.5rem;
+          }
+        }
+        .builder__details {
+          @include d-flex(center, center);
+          @include flex-fd-column;
+          gap: 0.6rem;
+          .builder__name {
+            font-size: 0.8rem;
+            font-weight: 600;
+          }
+          .builder__item__numbers {
+            font-size: 0.7rem;
+            color: $gray8;
+            font-weight: 300;
+          }
+        }
+        .card__btn {
+          @include d-flex(center, center);
+          @include h-w(3rem, 3rem);
+          border-radius: 50%;
+          background-color: #00a5b5;
+          position: absolute;
+          bottom: -1.5rem;
+          .btn__icon {
+            font-size: 2.5rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/typography";
+
+.projects__section {
+  @include d-flex(center, center);
+  background-color: #dcf5ec;
+  padding: 3em 0;
+  .container {
+    @include d-flex(center, flex-start);
+    @include flex-fd-column;
+    gap: 2rem;
+    .section__title__box {
+      text-align: left;
+      line-height: 2.5rem;
+      .title {
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+      .small__title {
+        color: $gray8;
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+    .card__section {
+      @include d-flex(center, center);
+      @include flex-fw-wrap;
+
+      gap: 2rem;
+      .card {
+        @include d-flex(flex-start, center);
+        @include flex-fd-column;
+        @include h-w(24rem, 23rem);
+        position: relative;
+        .project__purpose {
+          background-color: #00a5b5;
+          padding: 0.3em 0.8em;
+          border-radius: 0 0 0.5rem 0;
+          color: white;
+          font-size: $font-size-7;
+          font-weight: 300;
+          position: absolute;
+          left: 0;
+          top: 1rem;
+        }
+        .card__image {
+          img {
+            width: 23rem;
+            height: 17rem;
+            aspect-ratio: 5/3;
+            object-position: cover;
+            border-radius: 0.4rem;
+          }
+        }
+        .project__details {
+          @include d-flex(flex-end, flex-start);
+          @include flex-fd-column;
+          @include h-w(11rem, 21rem);
+          box-shadow: -19px 5px 20px rgba(0, 0, 0, 0.142);
+          border-radius: 0.8rem 0 0 0.8rem;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-color: #fff;
+          padding: 1em 1.5em;
+          line-height: 2.2rem;
+          .project__name {
+            font-weight: 600;
+          }
+          .project__address {
+            color: $gray8;
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+          .project__price {
+            font-weight: 600;
+            font-size: 1.2rem;
+          }
+        }
+        .card__icon {
+          background-color: #fff;
+          position: absolute;
+          color: #0494a2;
+          @include h-w(5rem, 5rem);
+          @include d-flex(center, center);
+          border-radius: 50%;
+          bottom: 8.5rem;
+          left: 5rem;
+          box-shadow: 0px 1px 22px rgba(0, 0, 0, 0.32);
+          .icon {
+            font-size: 3rem;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
