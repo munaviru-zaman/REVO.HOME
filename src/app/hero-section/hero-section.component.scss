@@ -5,7 +5,7 @@
 
 .hero-section {
   @include d-flex(center, center);
-  height: 70vh;
+  height: 68.9vh;
   background-color: #2abfce;
   position: relative;
   .hero-title-box {
@@ -35,8 +35,8 @@
   .search-section {
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.265));
     position: absolute;
-    bottom: -2rem;
-    width: 65%;
+    bottom: -1.7rem;
+    width: 66%;
     @include d-flex(center, center);
     @include flex-fd-column;
     .category-nav-content {

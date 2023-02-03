@@ -4,27 +4,38 @@
 @import "../../assets/scss/base/typography";
 
 .header {
-  @include d-flex(space-evenly, center);
+  @include d-flex(space-between, center);
+  padding: 0 5.7em;
   background-color: #fff;
   position: relative;
   z-index: 10;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.349);
-  height: 5.5rem;
+  height: 5.6rem;
   .logo-content {
-    @include flex-fd-column;
     @include d-flex(center, center);
-
-    .logo {
-      font-weight: 600;
-      color: $gray2;
-
-      .logo-red-text {
-        color: $logo-red;
+    gap: 1rem;
+    img {
+      width: 2.8rem;
+    }
+    .logo__text {
+      @include flex-fd-column;
+      @include d-flex(space-between, center);
+      gap: 0.4rem;
+      .logo {
+        @include font(1.2rem, 600, $gray2);
+        // word-spacing: 4.px;
+        letter-spacing: 1.7px;
+        .logo-red-text {
+          color: $logo-red;
+          margin-right: 0.35em;
+        }
       }
     }
 
     .logo-base-text {
-      font-size: 0.37rem;
+      @include font(0.4rem, 500, $gray2);
+      word-spacing: 2px;
+      letter-spacing: 0.2px;
     }
   }
 

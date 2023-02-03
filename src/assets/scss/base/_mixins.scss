@@ -13,9 +13,9 @@
   flex-wrap: wrap;
 }
 
-@mixin h-w($height,$width){
+@mixin h-w($height, $width) {
   height: $height;
-  width:$width;
+  width: $width;
 }
 
 @mixin flex-v-center {
@@ -47,10 +47,10 @@
   display: flex;
 }
 
-@mixin font($family, $size, $weight) {
-  font-family: $family;
+@mixin font($size, $weight, $color) {
   font-size: $size;
   font-weight: $weight;
+  color: $color;
 }
 
 @mixin transition($effect) {
